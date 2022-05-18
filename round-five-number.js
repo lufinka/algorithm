@@ -18,9 +18,9 @@ const roundFiveNoRepeatNumber2 = function (max,min){
     let x = 0
     while (x < 5) {
         let randomNumber = Math.floor(Math.random() * (max - min - x));
-        result.push(arr.splice(randomNumber,1))
+        result.push(arr.splice(randomNumber,1)[0]+min);
         x++
     }
-    return result.flat()
+    return result
 }
 console.log(roundFiveNoRepeatNumber2(99,88));
